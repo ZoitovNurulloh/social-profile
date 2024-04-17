@@ -36,10 +36,15 @@
 }
 
 
-
-
 /* CUSTOM PROPS */
 
+:root {
+  --dark:#141414;
+  --dark-grey:#1f1f1f;
+  --grey:#333333;
+  --green:#c4f82a;
+
+}
 
 /* GLOBAL */
 
@@ -59,11 +64,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: var(--dark);
+  color: #fff;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
 }
 
 img {
@@ -71,16 +76,6 @@ img {
   height: auto;
 }
 
-/* CONTAINER */
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 /* VISUALLY-HIDDEN */
