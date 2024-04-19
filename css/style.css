@@ -52,6 +52,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 14px;
 }
 
 *,
@@ -62,13 +63,15 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.71428rem;
+  padding-right: 1.71428rem;
   height: 100%;
   background-color: var(--dark);
   color: #fff;
   font-family: "Inter", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 img {
@@ -116,6 +119,78 @@ input:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+.card {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.85714rem;
+  background-color: var(--dark-grey);
+  border-radius: 0.85714rem;
+}
+
+.card__info {
+  margin-bottom: 1.71428rem;
+}
+
+.card__img {
+  width: 6.28571rem;
+  height: 6.28571rem;
+  border-radius: 50%;
+  margin-bottom: 1.71428rem;
+}
+
+.card__title {
+  font-size: 1.71428rem;
+  line-height: 150%;
+  margin-bottom: 0.28571rem;
+  text-transform:capitalize;
+}
+
+.card__description {
+  color:var(--green);
+  font-weight: 700;
+  margin-bottom: 1.71428rem;
+  text-transform:capitalize;
+}
+
+/* CARD LIST */
+
+.card__list {
+  max-width: 280px;
+  width: 100%;
+}
+
+.card__item {
+  position: relative;
+  background-color: var(--grey);
+  padding: 0.85714rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform:capitalize;
+  border-radius: 0.57142rem;
+  transition: background-color 0.5s ease,
+              color 0.5s ease;
+}
+
+.card__item:hover {
+  background-color: var(--green);
+}
+
+.card__item:hover .card__link {
+  color: var(--grey);
+}
+
+.card__item:not(:last-child) {
+  margin-bottom: 1.14285rem;
+}
+
+.card__link {
+  color: #fff;
+}
+
 
 
 /* RETINA BACKGROUND IMAGES */
@@ -127,4 +202,10 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    padding: 1.71428rem ;
+  }
 }
