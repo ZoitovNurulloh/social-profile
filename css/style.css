@@ -164,33 +164,36 @@ input:-webkit-autofill:focus {
 }
 
 .card__item {
-  position: relative;
-  background-color: var(--grey);
-  padding: 0.85714rem;
-  font-weight: 700;
-  cursor: pointer;
   text-transform:capitalize;
-  border-radius: 0.57142rem;
-  transition: background-color 0.5s ease,
-              color 0.5s ease;
 }
 
-.card__item:hover {
-  background-color: var(--green);
-}
-
-.card__item:hover .card__link {
-  color: var(--grey);
-}
 
 .card__item:not(:last-child) {
   margin-bottom: 1.14285rem;
 }
 
+
 .card__link {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--grey);
   color: #fff;
+  padding: 0.85714rem;
+  border-radius: 0.57142rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.5s ease,
+              color 0.5s ease;
 }
 
+.card__link:hover {
+  background-color: var(--green);
+  color: var(--grey);
+}
+
+.card__link:active {
+  opacity: 0.8;
+}
 
 
 /* RETINA BACKGROUND IMAGES */
